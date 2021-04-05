@@ -1,0 +1,19 @@
+{
+  "name": "gisellelazo_3_03042021",
+  "version": "1.0.0",
+  "description": "GiselleLazo_3_03042021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giselleLzo/GiselleLazo_3_03042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giselleLzo/GiselleLazo_3_03042021/issues"
+  },
+  "homepage": "https://github.com/giselleLzo/GiselleLazo_3_03042021#readme"
+}
