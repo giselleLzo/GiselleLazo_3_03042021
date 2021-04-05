@@ -1,3 +1,15 @@
+/**** Variables ****/
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  color: #000;
+}
 
+/**** Mobile styles ****/
+/**** Small devices styles ****/
+/**** Medium devices styles ****/
+/**** Large devices styles ****/
+/**** X-Large devices styles ****/
 
 /*# sourceMappingURL=style.css.map */

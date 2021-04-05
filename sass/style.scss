@@ -1,0 +1,30 @@
+/**** Variables ****/
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$colour-fourth: #eaeaea;
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  color: #000;
+}
+
+/**** Mobile styles ****/
+
+/**** Small devices styles ****/
+@media all and (min-width: 576px) {
+}
+
+/**** Medium devices styles ****/
+@media all and (min-width: 768px) {
+}
+
+/**** Large devices styles ****/
+@media all and (min-width: 992px) {
+}
+
+/**** X-Large devices styles ****/
+@media all and (min-width: 1200px) {
+}
