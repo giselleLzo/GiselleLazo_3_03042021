@@ -22,14 +22,20 @@ form {
   text-align: center;
   background-color: #eaeaea;
   padding: 1px 0;
+  box-shadow: inset 0 7px 6px -6px #c4c4c4;
+}
+form label {
+  padding-left: 30px;
+  color: #383838;
 }
 form input {
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
   font-weight: bold;
+  color: #383838;
   background-color: #eaeaea;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 /**** Small devices styles ****/

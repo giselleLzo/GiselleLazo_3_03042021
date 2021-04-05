@@ -30,13 +30,19 @@ form {
   text-align: center;
   background-color: $colour-fourth;
   padding: 1px 0;
+  box-shadow: inset 0 7px 6px -6px darken($colour-fourth, 15);
+  label {
+    padding-left: $padding-ten + 20px;
+    color: darken($colour-fourth, 70);
+  }
   input {
     border: none;
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
     font-weight: bold;
+    color: darken($colour-fourth, 70);
     background-color: $colour-fourth;
-    padding-left: $padding-ten;
+    padding-left: $padding-ten + $padding-five;
   }
 }
 
