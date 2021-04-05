@@ -1,9 +1,12 @@
-/**** Variables ****/
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
 
+$padding-five: 5px;
+$padding-ten: 10px;
+
+/**** Mobile styles ****/
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -11,7 +14,31 @@ body {
   color: #000;
 }
 
-/**** Mobile styles ****/
+header {
+  width: auto;
+  text-align: center;
+  img {
+    padding: $padding-ten + 10px 0 $padding-ten;
+  }
+}
+
+main {
+  width: auto;
+}
+
+form {
+  text-align: center;
+  background-color: $colour-fourth;
+  padding: 1px 0;
+  input {
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: $colour-fourth;
+    padding-left: $padding-ten;
+  }
+}
 
 /**** Small devices styles ****/
 @media all and (min-width: 576px) {

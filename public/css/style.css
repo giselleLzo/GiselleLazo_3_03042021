@@ -1,4 +1,4 @@
-/**** Variables ****/
+/**** Mobile styles ****/
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -6,7 +6,32 @@ body {
   color: #000;
 }
 
-/**** Mobile styles ****/
+header {
+  width: auto;
+  text-align: center;
+}
+header img {
+  padding: 20px 0 10px;
+}
+
+main {
+  width: auto;
+}
+
+form {
+  text-align: center;
+  background-color: #eaeaea;
+  padding: 1px 0;
+}
+form input {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: #eaeaea;
+  padding-left: 10px;
+}
+
 /**** Small devices styles ****/
 /**** Medium devices styles ****/
 /**** Large devices styles ****/
