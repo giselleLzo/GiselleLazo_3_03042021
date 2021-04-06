@@ -65,8 +65,8 @@ form input {
 }
 .btn:hover {
   opacity: 0.9;
-  transition: opacity 250ms;
-  box-shadow: 3px 5px 6px #d1d1d1 50;
+  box-shadow: 3px 5px 6px #b7b7b7;
+  transition: all 250ms;
 }
 
 /**** Small devices styles ****/

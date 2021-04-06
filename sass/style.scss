@@ -78,8 +78,8 @@ form {
   @include btn-shadow;
   &:hover {
     opacity: 0.9;
-    transition: opacity 250ms;
-    @include btn-shadow($colour: $bt-shadow 50);
+    @include btn-shadow(darken($bt-shadow, 10));
+    transition: all 250ms;
   }
 }
 
