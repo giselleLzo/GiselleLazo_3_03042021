@@ -2,14 +2,30 @@ $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
+$colour-fifth: #fff;
 
 $padding-five: 5px;
 $padding-ten: 10px;
 
 $bt-shadow: darken($colour-fourth, 10);
 
+@mixin font-md {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+@mixin ul-type {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 @mixin btn-shadow($colour: $bt-shadow) {
   box-shadow: 3px 5px 6px $colour;
+}
+
+@mixin border {
+  border: none;
 }
 
 /**** Mobile styles ****/
@@ -21,8 +37,7 @@ body {
 }
 
 ul {
-  text-decoration: none;
-  list-style-type: none;
+  @include ul-type;
 }
 
 /*Header*/
@@ -46,20 +61,18 @@ main {
 form {
   text-align: center;
   background-color: $colour-fourth;
-  padding: 1px 0;
   box-shadow: inset 0 7px 6px -6px darken($colour-fourth, 15);
+  padding: 1px 0;
   label {
-    padding-left: $padding-ten + 20px;
     color: darken($colour-fourth, 70);
+    padding-left: $padding-ten + 20px;
   }
   input {
-    border: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 0.9em;
-    font-weight: bold;
     color: darken($colour-fourth, 70);
     background-color: $colour-fourth;
     padding-left: $padding-ten + $padding-five;
+    @include font-md;
+    @include border;
   }
 }
 
@@ -72,21 +85,20 @@ form {
     padding: $padding-ten + 40px $padding-ten + 40px 0;
   }
   > p {
-    padding: 0 $padding-ten $padding-ten;
     font-weight: 100;
+    padding: 0 $padding-ten $padding-ten;
   }
 }
 
 .btn {
+  color: $colour-fifth;
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
-  border: none;
   padding: $padding-ten + $padding-five $padding-ten + 10px;
-  color: white;
-  font-size: 0.9em;
-  font-weight: 700;
   opacity: 1;
+  @include font-md;
   @include btn-shadow;
+  @include border;
   &:hover {
     opacity: 0.9;
     @include btn-shadow(darken($bt-shadow, 10));
@@ -105,21 +117,21 @@ form {
     margin-bottom: 0;
   }
   &__menu {
-    border: none;
-    border-radius: 20px;
-    background-color: lighten($colour-fourth, 5);
-    @include btn-shadow;
-    font-weight: 700;
-    padding: $padding-ten $padding-ten + 30px;
-    margin-bottom: 20px;
     display: block;
     position: relative;
+    font-weight: 700;
+    background-color: lighten($colour-fourth, 5);
+    border-radius: 20px;
+    @include btn-shadow;
+    @include border;
+    padding: $padding-ten $padding-ten + 30px;
+    margin-bottom: 20px;
     > p {
       display: flex;
       > .icon {
+        font-size: 1.1em;
         color: darken($colour-fourth, 50);
         padding-right: $padding-ten + 15px;
-        font-size: 1.1em;
       }
     }
     &__number {
@@ -127,13 +139,13 @@ form {
       position: absolute;
       top: 25px;
       left: -10px;
-      border-radius: 50%;
-      border-style: none;
-      background-color: $colour-primary;
-      color: white;
+      color: $colour-fifth;
       text-align: center;
       font-weight: 400;
       font-size: 0.7em;
+      border-radius: 50%;
+      @include border;
+      background-color: $colour-primary;
       height: 17px;
       width: 20px;
       padding-top: 3px;

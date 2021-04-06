@@ -29,21 +29,21 @@ main {
 form {
   text-align: center;
   background-color: #eaeaea;
-  padding: 1px 0;
   box-shadow: inset 0 7px 6px -6px #c4c4c4;
+  padding: 1px 0;
 }
 form label {
-  padding-left: 30px;
   color: #383838;
+  padding-left: 30px;
 }
 form input {
-  border: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9em;
-  font-weight: bold;
   color: #383838;
   background-color: #eaeaea;
   padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: none;
 }
 
 .location__content {
@@ -56,20 +56,21 @@ form input {
   padding: 50px 50px 0;
 }
 .location__content > p {
-  padding: 0 10px 10px;
   font-weight: 100;
+  padding: 0 10px 10px;
 }
 
 .btn {
+  color: #fff;
   border-radius: 25px;
   background: linear-gradient(170deg, #ff79da, #9356dc);
-  border: none;
   padding: 15px 20px;
-  color: white;
-  font-size: 0.9em;
-  font-weight: 700;
   opacity: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
   box-shadow: 3px 5px 6px #d1d1d1;
+  border: none;
 }
 .btn:hover {
   opacity: 0.9;
@@ -88,36 +89,36 @@ form input {
   margin-bottom: 0;
 }
 .working__menu {
-  border: none;
-  border-radius: 20px;
-  background-color: #f7f7f7;
-  box-shadow: 3px 5px 6px #d1d1d1;
-  font-weight: 700;
-  padding: 10px 40px;
-  margin-bottom: 20px;
   display: block;
   position: relative;
+  font-weight: 700;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 3px 5px 6px #d1d1d1;
+  border: none;
+  padding: 10px 40px;
+  margin-bottom: 20px;
 }
 .working__menu > p {
   display: flex;
 }
 .working__menu > p > .icon {
+  font-size: 1.1em;
   color: #6b6b6b;
   padding-right: 25px;
-  font-size: 1.1em;
 }
 .working__menu__number {
   display: block;
   position: absolute;
   top: 25px;
   left: -10px;
-  border-radius: 50%;
-  border-style: none;
-  background-color: #9356dc;
-  color: white;
+  color: #fff;
   text-align: center;
   font-weight: 400;
   font-size: 0.7em;
+  border-radius: 50%;
+  border: none;
+  background-color: #9356dc;
   height: 17px;
   width: 20px;
   padding-top: 3px;
