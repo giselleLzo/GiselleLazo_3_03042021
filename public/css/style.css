@@ -38,6 +38,30 @@ form input {
   padding-left: 15px;
 }
 
+.location__content {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+}
+.location__content > h1 {
+  margin: 0;
+  padding: 50px 50px 0;
+}
+.location__content > p {
+  padding: 0 10px 10px;
+  font-weight: 100;
+}
+
+.btn {
+  border-radius: 25px;
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
 /**** Small devices styles ****/
 /**** Medium devices styles ****/
 /**** Large devices styles ****/
