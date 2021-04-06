@@ -6,6 +6,12 @@ $colour-fourth: #eaeaea;
 $padding-five: 5px;
 $padding-ten: 10px;
 
+$bt-shadow: darken($colour-fourth, 10);
+
+@mixin btn-shadow($colour: $bt-shadow) {
+  box-shadow: 3px 5px 6px $colour;
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -68,6 +74,13 @@ form {
   color: white;
   font-size: 0.9em;
   font-weight: 700;
+  opacity: 1;
+  @include btn-shadow;
+  &:hover {
+    opacity: 0.9;
+    transition: opacity 250ms;
+    @include btn-shadow($colour: $bt-shadow 50);
+  }
 }
 
 /**** Small devices styles ****/
