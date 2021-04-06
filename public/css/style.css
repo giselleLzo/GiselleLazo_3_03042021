@@ -6,6 +6,12 @@ body {
   color: #000;
 }
 
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/*Header*/
 header {
   width: auto;
   text-align: center;
@@ -14,6 +20,7 @@ header img {
   padding: 20px 0 10px;
 }
 
+/*Main*/
 main {
   width: auto;
 }
@@ -67,6 +74,49 @@ form input {
   opacity: 0.9;
   box-shadow: 3px 5px 6px #b7b7b7;
   transition: all 250ms;
+}
+
+.working {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.working > h2 {
+  padding: 30px 0 0 30px;
+  margin-bottom: 0;
+}
+.working__menu {
+  border: none;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 3px 5px 6px #d1d1d1;
+  font-weight: 700;
+  padding: 10px 40px;
+  display: block;
+  position: relative;
+}
+.working__menu > p {
+  display: flex;
+}
+.working__menu > p .fa-mobile-alt {
+  color: #6b6b6b;
+  padding-right: 25px;
+}
+.working__menu__number {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: #9356dc;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7em;
+  height: 17px;
+  width: 20px;
+  padding-top: 3px;
 }
 
 /**** Small devices styles ****/
