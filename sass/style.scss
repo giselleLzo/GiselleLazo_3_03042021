@@ -41,6 +41,8 @@ main {
   width: auto;
 }
 
+/*Location section*/
+
 form {
   text-align: center;
   background-color: $colour-fourth;
@@ -92,6 +94,8 @@ form {
   }
 }
 
+/*Working section*/
+
 .working {
   display: flex;
   flex-direction: column;
@@ -107,13 +111,15 @@ form {
     @include btn-shadow;
     font-weight: 700;
     padding: $padding-ten $padding-ten + 30px;
+    margin-bottom: 20px;
     display: block;
     position: relative;
     > p {
       display: flex;
-      .fa-mobile-alt {
+      > .icon {
         color: darken($colour-fourth, 50);
         padding-right: $padding-ten + 15px;
+        font-size: 1.1em;
       }
     }
     &__number {
