@@ -27,6 +27,8 @@ $bt-shadow: darken($colour-fourth, 10);
 @mixin ul-type {
   text-decoration: none;
   list-style-type: none;
+  padding: 20px 0 40px;
+  margin: auto;
 }
 
 @mixin border {
@@ -71,6 +73,7 @@ header {
 
 main {
   width: auto;
+  margin: auto;
 }
 
 /*Location section*/
@@ -129,12 +132,15 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: auto;
   > h2 {
     @include h2;
   }
+
   &__menu {
     display: block;
     position: relative;
+    width: auto;
     font-weight: 700;
     background-color: lighten($colour-fourth, 5);
     border-radius: 20px;
@@ -173,6 +179,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: auto;
   background-color: lighten($colour-fourth, 5);
   > h2 {
     @include h2;
@@ -181,11 +188,12 @@ form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: auto;
     padding: $padding-ten + 10px;
     > article {
       display: block;
       position: relative;
-      width: 100%;
+      width: 330px;
       height: 250px;
       background-color: $colour-fifth;
       border-radius: 15px;
@@ -207,7 +215,7 @@ form {
         display: block;
         position: absolute;
         top: 13px;
-        left: 243px;
+        left: 240px;
         background-color: $colour-tertiary;
         color: darken($colour-tertiary, 40);
         font-size: 0.8em;
