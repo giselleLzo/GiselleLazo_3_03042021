@@ -4,18 +4,15 @@ $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
 $colour-fifth: #fff;
 
-$padding-five: 5px;
 $padding-ten: 10px;
+$padding-tw: 20px;
+
+$light: lighten($colour-fourth, 5);
 
 $bt-shadow: darken($colour-fourth, 10);
 
 @mixin btn-shadow($colour: $bt-shadow) {
   box-shadow: 3px 5px 6px $colour;
-}
-
-@mixin h2 {
-  padding: $padding-ten + 20 0 0 $padding-ten + 20;
-  margin-bottom: 0;
 }
 
 @mixin font-md {
@@ -27,7 +24,7 @@ $bt-shadow: darken($colour-fourth, 10);
 @mixin ul-type {
   text-decoration: none;
   list-style-type: none;
-  padding: 20px 0 40px;
+  padding: $padding-tw 0 $padding-tw + $padding-tw;
   margin: auto;
 }
 
@@ -43,10 +40,20 @@ body {
   color: #000;
 }
 
-h3 {
-  padding: 15px 0 0 15px;
+h1 {
   margin: 0;
+  padding: $padding-ten + $padding-tw * 2 $padding-ten + $padding-tw * 2 0;
+}
+
+h2 {
+  padding: $padding-tw + 10 0 0 $padding-tw + 10;
+  margin-bottom: 0;
+}
+
+h3 {
   font-size: 1.1em;
+  padding: $padding-ten + 5 0 0 $padding-ten + 5;
+  margin: 0;
 }
 
 ul {
@@ -56,7 +63,7 @@ ul {
 .p-style {
   font-weight: 100;
   margin: 0;
-  padding: 3px 0 0 15px;
+  padding: 3px 0 0 $padding-ten + 5;
 }
 
 /*Header*/
@@ -65,7 +72,7 @@ header {
   width: auto;
   text-align: center;
   img {
-    padding: $padding-ten + 10px 0 $padding-ten;
+    padding: $padding-tw 0 $padding-ten;
   }
 }
 
@@ -85,12 +92,12 @@ form {
   padding: 1px 0;
   label {
     color: darken($colour-fourth, 70);
-    padding-left: $padding-ten + 20px;
+    padding-left: $padding-tw + 10;
   }
   input {
     color: darken($colour-fourth, 70);
     background-color: $colour-fourth;
-    padding-left: $padding-ten + $padding-five;
+    padding-left: $padding-ten + 5;
     @include font-md;
     @include border;
   }
@@ -98,12 +105,8 @@ form {
 
 .location__content {
   text-align: center;
-  background-color: lighten($colour-fourth, 5);
-  padding-bottom: $padding-ten + 40px;
-  > h1 {
-    margin: 0;
-    padding: $padding-ten + 40px $padding-ten + 40px 0;
-  }
+  background-color: $light;
+  padding-bottom: $padding-ten + $padding-tw * 2;
   > p {
     font-weight: 100;
     padding: 0 $padding-ten $padding-ten;
@@ -114,7 +117,7 @@ form {
   color: $colour-fifth;
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
-  padding: $padding-ten + $padding-five $padding-ten + 10px;
+  padding: $padding-ten + 5 $padding-tw;
   opacity: 1;
   @include font-md;
   @include btn-shadow;
@@ -133,27 +136,23 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: auto;
-  > h2 {
-    @include h2;
-  }
-
   &__menu {
     display: block;
     position: relative;
     width: auto;
     font-weight: 700;
-    background-color: lighten($colour-fourth, 5);
+    background-color: $light;
     border-radius: 20px;
     @include btn-shadow;
     @include border;
-    padding: $padding-ten $padding-ten + 30px;
+    padding: $padding-ten $padding-tw * 2;
     margin-bottom: 20px;
     > p {
       display: flex;
       > .icon {
         font-size: 1.1em;
         color: darken($colour-fourth, 50);
-        padding-right: $padding-ten + 15px;
+        padding-right: $padding-ten + 5;
       }
     }
     &__number {
@@ -180,16 +179,13 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: auto;
-  background-color: lighten($colour-fourth, 5);
-  > h2 {
-    @include h2;
-  }
+  background-color: $light;
   &__place {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: auto;
-    padding: $padding-ten + 10px;
+    padding: $padding-tw;
     > article {
       display: block;
       position: relative;
@@ -221,7 +217,7 @@ form {
         font-size: 0.8em;
         font-weight: 700;
         border-radius: 2px;
-        padding: $padding-five $padding-ten + $padding-five;
+        padding: 5px $padding-ten + 5;
       }
       > .fa-heart {
         display: block;
