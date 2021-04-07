@@ -9,6 +9,8 @@ $padding-tw: 20px;
 
 $light: lighten($colour-fourth, 5);
 
+$bd-radius: 15px;
+
 $bt-shadow: darken($colour-fourth, 10);
 
 @mixin btn-shadow($colour: $bt-shadow) {
@@ -26,10 +28,6 @@ $bt-shadow: darken($colour-fourth, 10);
   list-style-type: none;
   padding: $padding-tw 0 $padding-tw + $padding-tw;
   margin: auto;
-}
-
-@mixin border {
-  border: none;
 }
 
 /**** Mobile styles ****/
@@ -98,8 +96,8 @@ form {
     color: darken($colour-fourth, 70);
     background-color: $colour-fourth;
     padding-left: $padding-ten + 5;
+    border: none;
     @include font-md;
-    @include border;
   }
 }
 
@@ -118,10 +116,10 @@ form {
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
   padding: $padding-ten + 5 $padding-tw;
+  border: none;
   opacity: 1;
   @include font-md;
   @include btn-shadow;
-  @include border;
   &:hover {
     opacity: 0.9;
     @include btn-shadow(darken($bt-shadow, 10));
@@ -144,7 +142,6 @@ form {
     background-color: $light;
     border-radius: 20px;
     @include btn-shadow;
-    @include border;
     padding: $padding-ten $padding-tw * 2;
     margin-bottom: 20px;
     > p {
@@ -165,7 +162,6 @@ form {
       font-weight: 400;
       font-size: 0.7em;
       border-radius: 50%;
-      @include border;
       background-color: $colour-primary;
       height: 17px;
       width: 20px;
@@ -192,7 +188,7 @@ form {
       width: 330px;
       height: 250px;
       background-color: $colour-fifth;
-      border-radius: 15px;
+      border-radius: $bd-radius;
       margin-bottom: 20px;
       @include btn-shadow;
       > figure {
@@ -204,7 +200,7 @@ form {
           object-fit: cover;
           width: 100%;
           height: 100%;
-          border-radius: 15px 15px 0 0;
+          border-radius: $bd-radius $bd-radius 0 0;
         }
       }
       > .new {

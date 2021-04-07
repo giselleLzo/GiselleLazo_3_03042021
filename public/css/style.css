@@ -65,10 +65,10 @@ form input {
   color: #383838;
   background-color: #eaeaea;
   padding-left: 15px;
+  border: none;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 0.9em;
-  border: none;
 }
 
 .location__content {
@@ -86,12 +86,12 @@ form input {
   border-radius: 25px;
   background: linear-gradient(170deg, #ff79da, #9356dc);
   padding: 15px 20px;
+  border: none;
   opacity: 1;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 0.9em;
   box-shadow: 3px 5px 6px #d1d1d1;
-  border: none;
 }
 .btn:hover {
   opacity: 0.9;
@@ -114,7 +114,6 @@ form input {
   background-color: #f7f7f7;
   border-radius: 20px;
   box-shadow: 3px 5px 6px #d1d1d1;
-  border: none;
   padding: 10px 40px;
   margin-bottom: 20px;
 }
@@ -136,7 +135,6 @@ form input {
   font-weight: 400;
   font-size: 0.7em;
   border-radius: 50%;
-  border: none;
   background-color: #9356dc;
   height: 17px;
   width: 20px;
