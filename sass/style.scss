@@ -50,6 +50,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
+  color: black;
   padding: $padding-ten + 5 0 0 $padding-ten + 5;
   margin: 0;
 }
@@ -60,6 +61,7 @@ ul {
 
 .p-style {
   font-weight: 100;
+  color: black;
   margin: 0;
   padding: 3px 0 0 $padding-ten + 5;
 }
@@ -194,7 +196,7 @@ form {
     align-items: flex-start;
     margin: auto;
     padding: $padding-tw;
-    > article {
+    &__prev {
       display: block;
       position: relative;
       width: 330px;

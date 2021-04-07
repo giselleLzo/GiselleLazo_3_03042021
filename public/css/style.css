@@ -18,6 +18,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
+  color: black;
   padding: 15px 0 0 15px;
   margin: 0;
 }
@@ -31,6 +32,7 @@ ul {
 
 .p-style {
   font-weight: 100;
+  color: black;
   margin: 0;
   padding: 3px 0 0 15px;
 }
@@ -166,7 +168,7 @@ form input {
   margin: auto;
   padding: 20px;
 }
-.restaurants__place > article {
+.restaurants__place__prev {
   display: block;
   position: relative;
   width: 330px;
@@ -176,19 +178,19 @@ form input {
   margin-bottom: 20px;
   box-shadow: 3px 5px 6px #d1d1d1;
 }
-.restaurants__place > article > figure {
+.restaurants__place__prev > figure {
   width: 100%;
   height: 175px;
   margin: 0;
   padding: 0;
 }
-.restaurants__place > article > figure > img {
+.restaurants__place__prev > figure > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0 0;
 }
-.restaurants__place > article > .new {
+.restaurants__place__prev > .new {
   display: block;
   position: absolute;
   top: 13px;
@@ -200,7 +202,7 @@ form input {
   border-radius: 2px;
   padding: 5px 15px;
 }
-.restaurants__place > article > .fa-heart {
+.restaurants__place__prev > .fa-heart {
   display: block;
   position: absolute;
   top: 193px;
