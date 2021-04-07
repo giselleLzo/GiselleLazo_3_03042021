@@ -153,6 +153,16 @@ form {
   }
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  > h2 {
+    padding: $padding-ten + 20 0 0 $padding-ten + 20;
+    margin-bottom: 0;
+  }
+}
+
 /**** Small devices styles ****/
 @media all and (min-width: 576px) {
 }
