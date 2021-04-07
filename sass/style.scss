@@ -9,6 +9,15 @@ $padding-ten: 10px;
 
 $bt-shadow: darken($colour-fourth, 10);
 
+@mixin btn-shadow($colour: $bt-shadow) {
+  box-shadow: 3px 5px 6px $colour;
+}
+
+@mixin h2 {
+  padding: $padding-ten + 20 0 0 $padding-ten + 20;
+  margin-bottom: 0;
+}
+
 @mixin font-md {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -18,10 +27,6 @@ $bt-shadow: darken($colour-fourth, 10);
 @mixin ul-type {
   text-decoration: none;
   list-style-type: none;
-}
-
-@mixin btn-shadow($colour: $bt-shadow) {
-  box-shadow: 3px 5px 6px $colour;
 }
 
 @mixin border {
@@ -36,8 +41,20 @@ body {
   color: #000;
 }
 
+h3 {
+  padding: 15px 0 0 15px;
+  margin: 0;
+  font-size: 1.1em;
+}
+
 ul {
   @include ul-type;
+}
+
+.p-style {
+  font-weight: 100;
+  margin: 0;
+  padding: 3px 0 0 15px;
 }
 
 /*Header*/
@@ -113,8 +130,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   > h2 {
-    padding: $padding-ten + 20 0 0 $padding-ten + 20;
-    margin-bottom: 0;
+    @include h2;
   }
   &__menu {
     display: block;
@@ -157,9 +173,57 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: lighten($colour-fourth, 5);
   > h2 {
-    padding: $padding-ten + 20 0 0 $padding-ten + 20;
-    margin-bottom: 0;
+    @include h2;
+  }
+  &__place {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $padding-ten + 10px;
+    > article {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background-color: $colour-fifth;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      @include btn-shadow;
+      > figure {
+        width: 100%;
+        height: 175px;
+        margin: 0;
+        padding: 0;
+        > img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px 15px 0 0;
+        }
+      }
+      > .new {
+        display: block;
+        position: absolute;
+        top: 13px;
+        left: 243px;
+        background-color: $colour-tertiary;
+        color: darken($colour-tertiary, 40);
+        font-size: 0.8em;
+        font-weight: 700;
+        border-radius: 2px;
+        padding: $padding-five $padding-ten + $padding-five;
+      }
+      > .fa-heart {
+        display: block;
+        position: absolute;
+        top: 193px;
+        left: 290px;
+        font-size: 1.3em;
+        color: darken($colour-fourth, 60);
+      }
+    }
   }
 }
 
