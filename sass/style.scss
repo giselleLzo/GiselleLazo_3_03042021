@@ -64,10 +64,16 @@ ul {
   padding: 3px 0 0 $padding-ten + 5;
 }
 
+a {
+  color: $colour-fifth;
+  text-decoration: none;
+}
+
 /*Header*/
 
 header {
   width: auto;
+  margin: auto;
   text-align: center;
   img {
     padding: $padding-tw 0 $padding-ten;

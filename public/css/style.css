@@ -35,9 +35,15 @@ ul {
   padding: 3px 0 0 15px;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*Header*/
 header {
   width: auto;
+  margin: auto;
   text-align: center;
 }
 header img {
