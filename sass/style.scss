@@ -170,6 +170,8 @@ form {
   }
 }
 
+/*Restaurants section*/
+
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -223,6 +225,32 @@ form {
         font-size: 1.3em;
         color: darken($colour-fourth, 60);
       }
+    }
+  }
+}
+
+/*Footer*/
+
+footer {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: darken($colour-fourth, 75);
+  color: $colour-fifth;
+  img {
+    width: 30%;
+    padding: $padding-tw + 5 0 0 $padding-tw + 5;
+  }
+}
+
+.nav__footer {
+  padding-left: $padding-tw + 5;
+  &__li {
+    padding: $padding-ten - 5 0;
+    font-size: 0.9em;
+    > i {
+      font-size: 0.8em;
     }
   }
 }

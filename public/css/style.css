@@ -141,6 +141,7 @@ form input {
   padding-top: 3px;
 }
 
+/*Restaurants section*/
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -196,6 +197,31 @@ form input {
   left: 290px;
   font-size: 1.3em;
   color: #515151;
+}
+
+/*Footer*/
+footer {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+footer img {
+  width: 30%;
+  padding: 25px 0 0 25px;
+}
+
+.nav__footer {
+  padding-left: 25px;
+}
+.nav__footer__li {
+  padding: 5px 0;
+  font-size: 0.9em;
+}
+.nav__footer__li > i {
+  font-size: 0.8em;
 }
 
 /**** Small devices styles ****/
