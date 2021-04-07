@@ -158,6 +158,10 @@ form {
         padding-right: $padding-ten + 5;
       }
     }
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($colour-primary, 35);
+    }
     &__number {
       display: block;
       position: absolute;

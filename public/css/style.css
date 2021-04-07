@@ -131,6 +131,10 @@ form input {
   color: #6b6b6b;
   padding-right: 15px;
 }
+.working__menu:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+}
 .working__menu__number {
   display: block;
   position: absolute;
