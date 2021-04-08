@@ -223,6 +223,7 @@ footer {
 footer img {
   width: 30%;
   padding: 25px 0 0 25px;
+  filter: invert(100%);
 }
 
 .nav__footer {

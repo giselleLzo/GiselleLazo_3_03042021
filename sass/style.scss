@@ -253,6 +253,7 @@ footer {
   img {
     width: 30%;
     padding: $padding-tw + 5 0 0 $padding-tw + 5;
+    filter: invert(100%);
   }
 }
 
