@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: auto;
-  color: #000;
+  color: black;
 }
 
 h1 {
@@ -38,7 +38,7 @@ ul {
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -90,7 +90,7 @@ form input {
 }
 
 .btn {
-  color: #fff;
+  color: white;
   border-radius: 25px;
   background: linear-gradient(170deg, #ff79da, #9356dc);
   padding: 15px 20px;
@@ -142,7 +142,7 @@ form input {
   position: absolute;
   top: 25px;
   left: -10px;
-  color: #fff;
+  color: white;
   text-align: center;
   font-weight: 400;
   font-size: 0.7em;
@@ -173,7 +173,7 @@ form input {
   position: relative;
   width: 330px;
   height: 250px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 3px 5px 6px #d1d1d1;
@@ -218,7 +218,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #2b2b2b;
-  color: #fff;
+  color: white;
 }
 footer img {
   width: 30%;

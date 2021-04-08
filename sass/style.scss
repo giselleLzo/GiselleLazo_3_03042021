@@ -2,7 +2,6 @@ $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
-$colour-fifth: #fff;
 
 $padding-ten: 10px;
 $padding-tw: 20px;
@@ -35,7 +34,7 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: auto;
-  color: #000;
+  color: darken($colour-fourth, 100);
 }
 
 h1 {
@@ -50,7 +49,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  color: black;
+  color: darken($colour-fourth, 100);
   padding: $padding-ten + 5 0 0 $padding-ten + 5;
   margin: 0;
 }
@@ -61,13 +60,13 @@ ul {
 
 .p-style {
   font-weight: 100;
-  color: black;
+  color: darken($colour-fourth, 100);
   margin: 0;
   padding: 3px 0 0 $padding-ten + 5;
 }
 
 a {
-  color: $colour-fifth;
+  color: lighten($colour-fourth, 100);
   text-decoration: none;
 }
 
@@ -120,7 +119,7 @@ form {
 }
 
 .btn {
-  color: $colour-fifth;
+  color: lighten($colour-fourth, 100);
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
   padding: $padding-ten + 5 $padding-tw;
@@ -169,7 +168,7 @@ form {
       position: absolute;
       top: 25px;
       left: -10px;
-      color: $colour-fifth;
+      color: lighten($colour-fourth, 100);
       text-align: center;
       font-weight: 400;
       font-size: 0.7em;
@@ -201,7 +200,7 @@ form {
       position: relative;
       width: 330px;
       height: 250px;
-      background-color: $colour-fifth;
+      background-color: lighten($colour-fourth, 100);
       border-radius: $bd-radius;
       margin-bottom: 20px;
       @include btn-shadow;
@@ -249,7 +248,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: darken($colour-fourth, 75);
-  color: $colour-fifth;
+  color: lighten($colour-fourth, 100);
   img {
     width: 30%;
     padding: $padding-tw + 5 0 0 $padding-tw + 5;
