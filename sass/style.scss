@@ -29,6 +29,24 @@ $bt-shadow: darken($colour-fourth, 10);
   margin: auto;
 }
 
+$colour-bars: $colour-primary;
+$size: 25px;
+$number-bars: 3;
+$animation-dur: 850ms;
+$animation-delay: $animation-dur / $number-bars;
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -68,6 +86,34 @@ ul {
 a {
   color: lighten($colour-fourth, 100);
   text-decoration: none;
+}
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: lighten($colour-fourth, 100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  &__load {
+    width: $size * 6;
+    height: $size * 5;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+      background-color: $colour-bars;
+      height: 100%;
+      width: $size;
+      animation: bars $animation-dur both 3000ms ease-in-out;
+      @for $i from 1 through $number-bars {
+        &--#{$i} {
+          animation-delay: $animation-delay * $i;
+        }
+      }
+    }
+  }
 }
 
 /*Header*/
