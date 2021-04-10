@@ -211,7 +211,11 @@ form input {
   margin: auto;
   padding: 20px;
 }
-.restaurants__place__prev {
+.restaurants__place__card {
+  display: block;
+  position: relative;
+}
+.restaurants__place__card__prev {
   display: block;
   position: relative;
   width: 330px;
@@ -221,13 +225,13 @@ form input {
   margin-bottom: 20px;
   box-shadow: 3px 5px 6px #d1d1d1;
 }
-.restaurants__place__prev > img {
+.restaurants__place__card__prev > img {
   object-fit: cover;
   width: 100%;
   height: 175px;
   border-radius: 15px 15px 0 0;
 }
-.restaurants__place__prev > .new {
+.restaurants__place__card__prev > .new {
   display: block;
   position: absolute;
   top: 13px;
@@ -239,27 +243,31 @@ form input {
   border-radius: 2px;
   padding: 5px 15px;
 }
-.restaurants__place__prev__like {
+.restaurants__place__card__like {
   display: block;
   position: absolute;
   top: 190px;
   left: 285px;
   font-size: 1.3em;
 }
-.restaurants__place__prev__like > .far {
-  color: #515151;
-  position: relative;
-}
-.restaurants__place__prev__like > .fas {
-  position: absolute;
-  left: 0;
-  top: 1.5px;
-}
-.restaurants__place__prev__like > .fas::before {
-  color: #9356dc;
-  background: -webkit-linear-gradient(170deg, #ff79da, #9356dc);
+.restaurants__place__card__like a {
+  background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.restaurants__place__card__like a:active {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+.restaurants__place__card__like > .far {
+  position: absolute;
+  top: 1px;
+  color: #515151;
+}
+.restaurants__place__card__like > .fas {
+  position: absolute;
 }
 
 /*Footer*/
