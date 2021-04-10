@@ -32,18 +32,34 @@ $bt-shadow: darken($colour-fourth, 10);
 $colour-bars: $colour-primary;
 $size: 25px;
 $number-bars: 3;
-$animation-dur: 850ms;
+$animation-dur: 1000ms;
 $animation-delay: $animation-dur / $number-bars;
 
 @keyframes bars {
   0% {
-    transform: scaleY(0.5);
+    transform: scaleY(0.2);
     opacity: 0;
+  }
+
+  50% {
+    transform: scaleY(0.7);
+    opacity: 1;
   }
 
   100% {
     transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+@keyframes load-pg {
+  from {
     opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -107,15 +123,16 @@ a {
 }
 
 .loading {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 3;
   background-color: lighten($colour-fourth, 100);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  animation: load-pg $animation-delay both 2150ms ease-in-out;
   &__load {
     width: $size * 6;
     height: $size * 5;
@@ -125,7 +142,8 @@ a {
       background-color: $colour-bars;
       height: 100%;
       width: $size;
-      animation: bars $animation-dur both 3000ms ease-in-out;
+      animation: bars $animation-dur both 3000ms
+        cubic-bezier(0.9, 0.83, 0.83, 0.67);
       @for $i from 1 through $number-bars {
         &--#{$i} {
           animation-delay: $animation-delay * $i;
@@ -133,6 +151,15 @@ a {
       }
     }
   }
+}
+
+.container {
+  width: auto;
+  margin: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  position: relative;
 }
 
 /*Header*/
@@ -193,7 +220,7 @@ form {
   @include font-md;
   @include btn-shadow;
   &:hover {
-    opacity: 0.9;
+    opacity: 0.85;
     @include btn-shadow(darken($bt-shadow, 10));
     transition: all 250ms;
   }
