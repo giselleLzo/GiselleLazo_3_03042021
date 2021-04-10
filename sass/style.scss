@@ -47,6 +47,33 @@ $animation-delay: $animation-dur / $number-bars;
   }
 }
 
+@keyframes btn-like {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scaleY(0.6);
+    opacity: 0.6;
+  }
+
+  75% {
+    transform: scaleY(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -279,7 +306,14 @@ form {
         top: 190px;
         left: 285px;
         font-size: 1.3em;
-        a {
+
+        > .far {
+          position: absolute;
+          top: 1px;
+          color: darken($colour-fourth, 60);
+        }
+
+        i.fas {
           background: -webkit-linear-gradient(
             90deg,
             $colour-secondary,
@@ -290,17 +324,13 @@ form {
           -webkit-text-fill-color: transparent;
           opacity: 0;
           &:active {
-            opacity: 1;
-            transition: opacity 250ms;
+            animation: btn-like both 250ms;
           }
         }
-        > .far {
-          position: absolute;
-          top: 1px;
-          color: darken($colour-fourth, 60);
-        }
+
         > .fas {
           position: absolute;
+          cursor: pointer;
         }
       }
     }
