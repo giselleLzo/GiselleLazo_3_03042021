@@ -68,7 +68,7 @@ h2 {
 h3 {
   font-size: 1.1em;
   color: darken($colour-fourth, 100);
-  padding: $padding-ten + 5 0 0 $padding-ten + 5;
+  padding: $padding-ten 0 0 $padding-ten + 5;
   margin: 0;
 }
 
@@ -250,17 +250,11 @@ form {
       border-radius: $bd-radius;
       margin-bottom: 20px;
       @include btn-shadow;
-      > figure {
+      > img {
+        object-fit: cover;
         width: 100%;
         height: 175px;
-        margin: 0;
-        padding: 0;
-        > img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          border-radius: $bd-radius $bd-radius 0 0;
-        }
+        border-radius: $bd-radius $bd-radius 0 0;
       }
       > .new {
         display: block;
@@ -274,13 +268,32 @@ form {
         border-radius: 2px;
         padding: 5px $padding-ten + 5;
       }
-      > .fa-heart {
+      &__like {
         display: block;
         position: absolute;
-        top: 193px;
-        left: 290px;
+        top: 190px;
+        left: 285px;
         font-size: 1.3em;
-        color: darken($colour-fourth, 60);
+        > .far {
+          color: darken($colour-fourth, 60);
+          position: relative;
+        }
+
+        > .fas {
+          position: absolute;
+          left: 0;
+          top: 1.5px;
+          &::before {
+            color: $colour-primary;
+            background: -webkit-linear-gradient(
+              170deg,
+              $colour-secondary,
+              $colour-primary
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
       }
     }
   }

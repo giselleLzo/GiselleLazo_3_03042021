@@ -29,7 +29,7 @@ h2 {
 h3 {
   font-size: 1.1em;
   color: black;
-  padding: 15px 0 0 15px;
+  padding: 10px 0 0 15px;
   margin: 0;
 }
 
@@ -221,16 +221,10 @@ form input {
   margin-bottom: 20px;
   box-shadow: 3px 5px 6px #d1d1d1;
 }
-.restaurants__place__prev > figure {
-  width: 100%;
-  height: 175px;
-  margin: 0;
-  padding: 0;
-}
-.restaurants__place__prev > figure > img {
+.restaurants__place__prev > img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 175px;
   border-radius: 15px 15px 0 0;
 }
 .restaurants__place__prev > .new {
@@ -245,13 +239,27 @@ form input {
   border-radius: 2px;
   padding: 5px 15px;
 }
-.restaurants__place__prev > .fa-heart {
+.restaurants__place__prev__like {
   display: block;
   position: absolute;
-  top: 193px;
-  left: 290px;
+  top: 190px;
+  left: 285px;
   font-size: 1.3em;
+}
+.restaurants__place__prev__like > .far {
   color: #515151;
+  position: relative;
+}
+.restaurants__place__prev__like > .fas {
+  position: absolute;
+  left: 0;
+  top: 1.5px;
+}
+.restaurants__place__prev__like > .fas::before {
+  color: #9356dc;
+  background: -webkit-linear-gradient(170deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*Footer*/
