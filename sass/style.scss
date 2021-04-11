@@ -3,8 +3,8 @@ $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
 
-$padding-ten: 10px;
-$padding-tw: 20px;
+$padding-sm: 10px;
+$padding-md: 20px;
 
 $light: lighten($colour-fourth, 5);
 
@@ -25,7 +25,7 @@ $bt-shadow: darken($colour-fourth, 10);
 @mixin ul-type {
   text-decoration: none;
   list-style-type: none;
-  padding: $padding-tw 0 $padding-tw + $padding-tw;
+  padding: $padding-md 0 $padding-md + $padding-md;
   margin: auto;
 }
 
@@ -91,18 +91,18 @@ body {
 
 h1 {
   margin: 0;
-  padding: $padding-ten + $padding-tw * 2 $padding-ten + $padding-tw * 2 0;
+  padding: $padding-sm + $padding-md * 2 $padding-sm + $padding-md * 2 0;
 }
 
 h2 {
-  padding: $padding-tw + 10 0 0 $padding-tw + 10;
+  padding: $padding-md + 10 0 0 $padding-md + 10;
   margin-bottom: 0;
 }
 
 h3 {
   font-size: 1.1em;
   color: darken($colour-fourth, 100);
-  padding: $padding-ten 0 0 $padding-ten + 5;
+  padding: $padding-sm 0 0 $padding-sm + 5;
   margin: 0;
 }
 
@@ -114,7 +114,7 @@ ul {
   font-weight: 100;
   color: darken($colour-fourth, 100);
   margin: 0;
-  padding: 3px 0 0 $padding-ten + 5;
+  padding: 3px 0 0 $padding-sm + 5;
 }
 
 a {
@@ -160,7 +160,7 @@ header {
   margin: auto;
   text-align: center;
   img {
-    padding: $padding-tw 0 $padding-ten;
+    padding: $padding-md 0 $padding-sm;
   }
 }
 
@@ -180,12 +180,12 @@ form {
   padding: 1px 0;
   label {
     color: darken($colour-fourth, 70);
-    padding-left: $padding-tw + 10;
+    padding-left: $padding-md + 10;
   }
   input {
     color: darken($colour-fourth, 70);
     background-color: $colour-fourth;
-    padding-left: $padding-ten + 5;
+    padding-left: $padding-sm + 5;
     border: none;
     @include font-md;
   }
@@ -194,10 +194,10 @@ form {
 .location__content {
   text-align: center;
   background-color: $light;
-  padding-bottom: $padding-ten + $padding-tw * 2;
+  padding-bottom: $padding-sm + $padding-md * 2;
   > p {
     font-weight: 100;
-    padding: 0 $padding-ten $padding-ten;
+    padding: 0 $padding-sm $padding-sm;
   }
 }
 
@@ -205,7 +205,7 @@ form {
   color: lighten($colour-fourth, 100);
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
-  padding: $padding-ten + 5 $padding-tw;
+  padding: $padding-sm + 5 $padding-md;
   border: none;
   opacity: 1;
   @include font-md;
@@ -232,14 +232,14 @@ form {
     background-color: $light;
     border-radius: 20px;
     @include btn-shadow;
-    padding: $padding-ten $padding-tw * 2;
+    padding: $padding-sm $padding-md * 2;
     margin-bottom: 20px;
     > p {
       display: flex;
       > .icon {
         font-size: 1.1em;
         color: darken($colour-fourth, 50);
-        padding-right: $padding-ten + 5;
+        padding-right: $padding-sm + 5;
       }
     }
     &:hover {
@@ -277,7 +277,7 @@ form {
     flex-direction: column;
     align-items: flex-start;
     margin: auto;
-    padding: $padding-tw;
+    padding: $padding-md;
     &__card {
       display: block;
       position: relative;
@@ -306,7 +306,7 @@ form {
           font-size: 0.8em;
           font-weight: 700;
           border-radius: 2px;
-          padding: 5px $padding-ten + 5;
+          padding: 5px $padding-sm + 5;
         }
       }
       &__like {
@@ -353,15 +353,15 @@ footer {
   color: lighten($colour-fourth, 100);
   img {
     width: 30%;
-    padding: $padding-tw + 5 0 0 $padding-tw + 5;
+    padding: $padding-md + 5 0 0 $padding-md + 5;
     filter: invert(100%);
   }
 }
 
 .nav__footer {
-  padding-left: $padding-tw + 5;
+  padding-left: $padding-md + 5;
   &__li {
-    padding: $padding-ten - 5 0;
+    padding: $padding-sm - 5 0;
     font-size: 0.9em;
     > i {
       font-size: 0.8em;
