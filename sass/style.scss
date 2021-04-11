@@ -3,10 +3,11 @@ $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-fourth: #eaeaea;
 
+$light: lighten($colour-fourth, 100);
+$dark: darken($colour-fourth, 100);
+
 $padding-sm: 10px;
 $padding-md: 20px;
-
-$light: lighten($colour-fourth, 5);
 
 $bd-radius: 15px;
 
@@ -86,7 +87,7 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: auto;
-  color: darken($colour-fourth, 100);
+  color: $dark;
 }
 
 h1 {
@@ -101,7 +102,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  color: darken($colour-fourth, 100);
+  color: $dark;
   padding: $padding-sm 0 0 $padding-sm + 5;
   margin: 0;
 }
@@ -110,16 +111,16 @@ ul {
   @include ul-type;
 }
 
-.p-style {
-  font-weight: 100;
-  color: darken($colour-fourth, 100);
-  margin: 0;
-  padding: 3px 0 0 $padding-sm + 5;
+a {
+  color: $light;
+  text-decoration: none;
 }
 
-a {
-  color: lighten($colour-fourth, 100);
-  text-decoration: none;
+.p-style {
+  font-weight: 100;
+  color: $dark;
+  margin: 0;
+  padding: 3px 0 0 $padding-sm + 5;
 }
 
 .loading {
@@ -127,11 +128,11 @@ a {
   width: 100%;
   height: 100%;
   z-index: 3;
-  background-color: lighten($colour-fourth, 100);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  background-color: $light;
   animation: load-pg $animation-delay both 2150ms ease-in-out;
   &__load {
     width: $size * 6;
@@ -139,9 +140,9 @@ a {
     display: flex;
     justify-content: space-evenly;
     &__bar {
-      background-color: $colour-bars;
       height: 100%;
       width: $size;
+      background-color: $colour-bars;
       animation: bars $animation-dur both 3000ms
         cubic-bezier(0.9, 0.83, 0.83, 0.67);
       @for $i from 1 through $number-bars {
@@ -193,7 +194,7 @@ form {
 
 .location__content {
   text-align: center;
-  background-color: $light;
+  background-color: lighten($colour-fourth, 5);
   padding-bottom: $padding-sm + $padding-md * 2;
   > p {
     font-weight: 100;
@@ -202,7 +203,7 @@ form {
 }
 
 .btn {
-  color: lighten($colour-fourth, 100);
+  color: $light;
   border-radius: 25px;
   background: linear-gradient(170deg, $colour-secondary, $colour-primary);
   padding: $padding-sm + 5 $padding-md;
@@ -229,7 +230,7 @@ form {
     position: relative;
     width: auto;
     font-weight: 700;
-    background-color: $light;
+    background-color: lighten($colour-fourth, 5);
     border-radius: 20px;
     @include btn-shadow;
     padding: $padding-sm $padding-md * 2;
@@ -251,7 +252,7 @@ form {
       position: absolute;
       top: 25px;
       left: -10px;
-      color: lighten($colour-fourth, 100);
+      color: $light;
       text-align: center;
       font-weight: 400;
       font-size: 0.7em;
@@ -271,7 +272,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: auto;
-  background-color: $light;
+  background-color: lighten($colour-fourth, 5);
   &__place {
     display: flex;
     flex-direction: column;
@@ -286,7 +287,7 @@ form {
         position: relative;
         width: 330px;
         height: 250px;
-        background-color: lighten($colour-fourth, 100);
+        background-color: $light;
         border-radius: $bd-radius;
         margin-bottom: 20px;
         @include btn-shadow;
@@ -350,7 +351,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: darken($colour-fourth, 75);
-  color: lighten($colour-fourth, 100);
+  color: $light;
   img {
     width: 30%;
     padding: $padding-md + 5 0 0 $padding-md + 5;
