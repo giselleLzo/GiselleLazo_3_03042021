@@ -111,6 +111,7 @@ h4 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.7em;
   flex: 2;
+  margin-bottom: 0;
 }
 
 h5 {
@@ -401,12 +402,31 @@ form {
       flex-direction: column;
       margin-left: 20px;
       &__content {
-        width: 90%;
+        width: 94%;
+        position: relative;
         background-color: $light;
-
-        border-radius: 20px;
+        border-radius: 15px;
+        padding: 3px 0 $padding-sm;
+        margin-bottom: 15px;
+        @include btn-shadow;
       }
     }
+  }
+}
+
+.price {
+  position: absolute;
+  font-weight: 700;
+  left: 285px;
+  top: 38px;
+}
+
+.menu-btn {
+  text-align: center;
+  padding: $padding-sm 0;
+  margin: 20px 0 60px;
+  span {
+    padding: 0 $padding-md * 1;
   }
 }
 
