@@ -118,9 +118,10 @@ h5 {
   font-weight: 100;
   font-size: 1em;
   text-transform: uppercase;
-  padding-left: $padding-md;
   padding-bottom: 4px;
   border-bottom: 3px solid $colour-tertiary;
+  margin-left: 20px;
+  width: 40px;
 }
 
 ul {
@@ -130,6 +131,8 @@ ul {
 a {
   color: $light;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .p-style {
@@ -176,15 +179,16 @@ header {
   width: auto;
   margin: auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   img {
     padding: $padding-md 0 $padding-sm + 5;
   }
   .fa-arrow-left {
-    position: fixed;
+    position: absolute;
     font-size: 1.2em;
     color: darken($colour-fourth, 70);
+    padding-top: $padding-md + $padding-sm;
     left: 20px;
   }
 }

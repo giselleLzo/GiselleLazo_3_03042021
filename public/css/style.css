@@ -71,9 +71,10 @@ h5 {
   font-weight: 100;
   font-size: 1em;
   text-transform: uppercase;
-  padding-left: 20px;
   padding-bottom: 4px;
   border-bottom: 3px solid #99e2d0;
+  margin-left: 20px;
+  width: 40px;
 }
 
 ul {
@@ -86,6 +87,8 @@ ul {
 a {
   color: white;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .p-style {
@@ -134,16 +137,17 @@ header {
   width: auto;
   margin: auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 header img {
   padding: 20px 0 15px;
 }
 header .fa-arrow-left {
-  position: fixed;
+  position: absolute;
   font-size: 1.2em;
   color: #383838;
+  padding-top: 30px;
   left: 20px;
 }
 
