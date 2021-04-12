@@ -227,7 +227,7 @@ form input {
 .working__menu > p {
   display: flex;
 }
-.working__menu > p > .icon {
+.working__menu > p > .fas {
   font-size: 1.1em;
   color: #6b6b6b;
   padding-right: 15px;
@@ -250,6 +250,10 @@ form input {
   height: 17px;
   width: 20px;
   padding-top: 3px;
+}
+
+.bg-btn:hover .icon {
+  color: #9356dc;
 }
 
 /*Restaurants section*/

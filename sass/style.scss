@@ -265,7 +265,7 @@ form {
     margin-bottom: 20px;
     > p {
       display: flex;
-      > .icon {
+      > .fas {
         font-size: 1.1em;
         color: darken($colour-fourth, 50);
         padding-right: $padding-sm + 5;
@@ -291,6 +291,10 @@ form {
       padding-top: 3px;
     }
   }
+}
+
+.bg-btn:hover .icon {
+  color: $colour-primary;
 }
 
 /*Restaurants section*/
