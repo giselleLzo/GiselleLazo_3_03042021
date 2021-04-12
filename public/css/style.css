@@ -35,6 +35,16 @@
     opacity: 1;
   }
 }
+@keyframes menu {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 1000ms ease-in-out;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -360,12 +370,12 @@ form input {
   display: flex;
   flex-direction: column;
 }
-.menu__prev__descriptions {
+.menu__prev__card {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
 }
-.menu__prev__descriptions__content {
+.menu__prev__card__content {
   width: 94%;
   position: relative;
   background-color: white;
@@ -373,6 +383,16 @@ form input {
   padding: 3px 0 10px;
   margin-bottom: 15px;
   box-shadow: 3px 5px 6px #d1d1d1;
+  animation: menu 1000ms backwards ease-in-out;
+}
+.menu__prev__card__content--1 {
+  animation-delay: 333.3333333333ms;
+}
+.menu__prev__card__content--2 {
+  animation-delay: 666.6666666667ms;
+}
+.menu__prev__card__content--3 {
+  animation-delay: 1000ms;
 }
 
 .price {

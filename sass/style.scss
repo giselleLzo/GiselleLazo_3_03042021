@@ -82,6 +82,20 @@ $animation-delay: $animation-dur / $number-bars;
   }
 }
 
+$menu-delay: $animation-dur / 3;
+
+@keyframes menu {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 1000ms ease-in-out;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -405,7 +419,7 @@ form {
   &__prev {
     display: flex;
     flex-direction: column;
-    &__descriptions {
+    &__card {
       display: flex;
       flex-direction: column;
       margin-left: 20px;
@@ -417,6 +431,12 @@ form {
         padding: 3px 0 $padding-sm;
         margin-bottom: 15px;
         @include btn-shadow;
+        animation: menu $animation-dur backwards ease-in-out;
+        @for $i from 1 through 3 {
+          &--#{$i} {
+            animation-delay: $menu-delay * $i;
+          }
+        }
       }
     }
   }
