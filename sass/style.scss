@@ -391,50 +391,57 @@ form {
 
 /*Menu page*/
 
-.menu-img {
-  width: auto;
-  > img {
-    width: 100%;
-  }
-}
-
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: lighten($colour-fourth, 5);
-  border-radius: 35px 35px 0 0;
-  &__heading {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    padding-left: $padding-md;
-    > i {
-      flex: 1;
-      text-align: right;
-      font-size: 1.3em;
-      color: darken($colour-fourth, 60);
-      padding-right: $padding-md + $padding-sm;
+  &__img {
+    width: auto;
+    z-index: -1;
+    > img {
+      width: 100%;
     }
   }
-  &__prev {
+
+  &__card {
     display: flex;
     flex-direction: column;
-    &__card {
+    z-index: 1;
+    margin-top: -55px;
+    background-color: lighten($colour-fourth, 5);
+    border-radius: 35px 35px 0 0;
+    &__heading {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      padding-left: $padding-md;
+      > i {
+        flex: 1;
+        text-align: right;
+        font-size: 1.3em;
+        color: darken($colour-fourth, 60);
+        padding-right: $padding-md + $padding-sm;
+      }
+    }
+    &__prev {
       display: flex;
       flex-direction: column;
-      margin-left: 20px;
-      &__content {
-        width: 94%;
-        position: relative;
-        background-color: $light;
-        border-radius: 15px;
-        padding: 3px 0 $padding-sm;
-        margin-bottom: 15px;
-        @include btn-shadow;
-        animation: menu $animation-dur backwards ease-in-out;
-        @for $i from 1 through 3 {
-          &--#{$i} {
-            animation-delay: $menu-delay * $i;
+      &__descrip {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        &__content {
+          width: 94%;
+          position: relative;
+          background-color: $light;
+          border-radius: 15px;
+          padding: 3px 0 $padding-sm;
+          margin-bottom: 15px;
+          @include btn-shadow;
+          animation: menu $animation-dur backwards ease-in-out;
+          @for $i from 1 through 3 {
+            &--#{$i} {
+              animation-delay: $menu-delay * $i;
+            }
           }
         }
       }
