@@ -96,6 +96,18 @@ $menu-delay: $animation-dur / 3;
   }
 }
 
+@keyframes c-box {
+  0% {
+    transform: translateX(30px);
+    transition: transform 1000ms ease-in-out;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -429,6 +441,7 @@ form {
         display: flex;
         flex-direction: column;
         margin-left: 20px;
+
         &__content {
           width: 94%;
           position: relative;
@@ -437,6 +450,14 @@ form {
           padding: 3px 0 $padding-sm;
           margin-bottom: 15px;
           @include btn-shadow;
+
+          &:hover + .check-box {
+            animation: c-box 500ms both ease-in-out;
+
+            & > .fa-check-circle {
+              transform: rotate(0deg);
+            }
+          }
           animation: menu $animation-dur backwards ease-in-out;
           @for $i from 1 through 3 {
             &--#{$i} {
@@ -452,8 +473,8 @@ form {
 .price {
   position: absolute;
   font-weight: 700;
-  left: 285px;
-  top: 38px;
+  left: 87%;
+  top: 55%;
 }
 
 .menu-btn {
@@ -463,6 +484,27 @@ form {
   span {
     padding: 0 $padding-md * 1;
   }
+}
+
+.check-box {
+  width: 55px;
+  height: 67px;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  left: 80%;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colour-tertiary;
+}
+
+.fa-check-circle {
+  color: $light;
+  font-size: 1.3em;
+  transform: rotate(-360deg);
+  transition: transform 800ms ease-in-out;
 }
 
 /*Footer*/

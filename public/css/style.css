@@ -45,6 +45,16 @@
     opacity: 1;
   }
 }
+@keyframes c-box {
+  0% {
+    transform: translateX(30px);
+    transition: transform 1000ms ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -391,6 +401,12 @@ form input {
   box-shadow: 3px 5px 6px #d1d1d1;
   animation: menu 1000ms backwards ease-in-out;
 }
+.menu__card__prev__descrip__content:hover + .check-box {
+  animation: c-box 500ms both ease-in-out;
+}
+.menu__card__prev__descrip__content:hover + .check-box > .fa-check-circle {
+  transform: rotate(0deg);
+}
 .menu__card__prev__descrip__content--1 {
   animation-delay: 333.3333333333ms;
 }
@@ -404,8 +420,8 @@ form input {
 .price {
   position: absolute;
   font-weight: 700;
-  left: 285px;
-  top: 38px;
+  left: 87%;
+  top: 55%;
 }
 
 .menu-btn {
@@ -415,6 +431,27 @@ form input {
 }
 .menu-btn span {
   padding: 0 20px;
+}
+
+.check-box {
+  width: 55px;
+  height: 67px;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  left: 80%;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+}
+
+.fa-check-circle {
+  color: white;
+  font-size: 1.3em;
+  transform: rotate(-360deg);
+  transition: transform 800ms ease-in-out;
 }
 
 /*Footer*/
