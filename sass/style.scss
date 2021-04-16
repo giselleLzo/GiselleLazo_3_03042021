@@ -96,6 +96,16 @@ $menu-delay: $animation-dur / 3;
   }
 }
 
+@keyframes c-box {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -467,7 +477,7 @@ form {
   &:hover .check-box {
     width: 20%;
     > .fa-check-circle {
-      transform: rotate(0deg);
+      animation: c-box 500ms linear;
     }
   }
   &__content {
@@ -508,10 +518,6 @@ form {
   border-radius: 0 15px 15px 0;
   background-color: $colour-tertiary;
   transition: width 500ms linear;
-  .fa-check-circle {
-    transform: rotate(-360deg);
-    transition: transform 500ms linear;
-  }
 }
 
 .menu-btn {

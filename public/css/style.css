@@ -45,6 +45,14 @@
     opacity: 1;
   }
 }
+@keyframes c-box {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /**** Mobile styles ****/
 body {
   box-sizing: border-box;
@@ -422,7 +430,7 @@ form input {
   width: 20%;
 }
 .menu-descrip:hover .check-box > .fa-check-circle {
-  transform: rotate(0deg);
+  animation: c-box 500ms linear;
 }
 .menu-descrip__content {
   width: 100%;
@@ -461,10 +469,6 @@ form input {
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
   transition: width 500ms linear;
-}
-.check-box .fa-check-circle {
-  transform: rotate(-360deg);
-  transition: transform 500ms linear;
 }
 
 .menu-btn {
