@@ -456,7 +456,6 @@ form {
   background-color: $light;
   border-radius: 15px;
   padding: 0;
-  transform-origin: left;
   margin-bottom: 15px;
   @include btn-shadow;
   animation: menu $animation-dur backwards ease-in-out;
@@ -468,7 +467,6 @@ form {
   &:hover .check-box {
     width: 20%;
     > .fa-check-circle {
-      opacity: 1;
       transform: rotate(0deg);
     }
   }
