@@ -11,22 +11,35 @@ $padding-md: 20px;
 
 $bd-radius: 15px;
 
+$font-size: (
+  sm: 0.8em,
+  md: 0.9em,
+  lg: 1.1em,
+  xl: 1.3em,
+);
+
+$font-weight: (
+  lgt: 100,
+  nm: 400,
+  bd: 700,
+);
+
 $bt-shadow: darken($colour-fourth, 10);
 
-@mixin btn-shadow($colour: $bt-shadow) {
+@mixin shadow($colour: $bt-shadow) {
   box-shadow: 3px 5px 6px $colour;
 }
 
 @mixin font-md {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 0.9em;
+  font-weight: map-get($font-weight, bd);
+  font-size: map-get($font-size, md);
 }
 
 @mixin ul-type {
   text-decoration: none;
   list-style-type: none;
-  padding: $padding-md 0 $padding-md + $padding-md;
+  padding: $padding-md 0 $padding-md * 2;
   margin: auto;
 }
 
@@ -120,32 +133,32 @@ h1 {
 }
 
 h2 {
-  padding: $padding-md + 10 0 0 $padding-md + 10;
+  padding: $padding-md + $padding-sm 0 0 $padding-md + $padding-sm;
   margin-bottom: 0;
 }
 
 h3 {
-  font-size: 1.1em;
-  color: $dark;
-  padding: $padding-sm + 3 0 0 $padding-sm + 5;
-  margin: 0;
-}
-
-h4 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.7em;
   flex: 2;
   margin-bottom: 0;
 }
 
-h5 {
-  font-weight: 100;
+h4 {
+  font-weight: map-get($font-weight, lgt);
   font-size: 1em;
   text-transform: uppercase;
   padding-bottom: 4px;
   border-bottom: 3px solid $colour-tertiary;
   margin-left: 20px;
   width: 40px;
+}
+
+h5 {
+  font-size: map-get($font-size, lg);
+  color: $dark;
+  padding: $padding-sm + 3 0 0 $padding-sm + 5;
+  margin: 0;
 }
 
 ul {
@@ -160,8 +173,8 @@ a {
 }
 
 .p-style {
-  font-size: 0.9em;
-  font-weight: 100;
+  font-size: map-get($font-size, md);
+  font-weight: map-get($font-weight, lgt);
   color: $dark;
   margin: 0;
   padding: 3px 0 0 $padding-sm + 5;
@@ -234,7 +247,7 @@ form {
   padding: 1px 0;
   label {
     color: darken($colour-fourth, 70);
-    padding-left: $padding-md + 10;
+    padding-left: $padding-md + $padding-sm;
   }
   input {
     color: darken($colour-fourth, 70);
@@ -250,7 +263,7 @@ form {
   background-color: lighten($colour-fourth, 5);
   padding-bottom: $padding-sm + $padding-md * 2;
   > p {
-    font-weight: 100;
+    font-weight: map-get($font-weight, lgt);
     padding: 0 $padding-sm $padding-sm;
   }
 }
@@ -263,10 +276,10 @@ form {
   border: none;
   opacity: 1;
   @include font-md;
-  @include btn-shadow;
+  @include shadow;
   &:hover {
     opacity: 0.85;
-    @include btn-shadow(darken($bt-shadow, 10));
+    @include shadow(darken($bt-shadow, 10));
     transition: all 250ms;
   }
 }
@@ -282,16 +295,16 @@ form {
     display: block;
     position: relative;
     width: auto;
-    font-weight: 700;
+    font-weight: map-get($font-weight, bd);
     background-color: lighten($colour-fourth, 5);
     border-radius: 20px;
-    @include btn-shadow;
+    @include shadow;
     padding: $padding-sm $padding-md * 2;
     margin-bottom: 20px;
     > p {
       display: flex;
       > .fas {
-        font-size: 1.1em;
+        font-size: map-get($font-size, lg);
         color: darken($colour-fourth, 50);
         padding-right: $padding-sm + 5;
       }
@@ -307,7 +320,7 @@ form {
       left: -10px;
       color: $light;
       text-align: center;
-      font-weight: 400;
+      font-weight: map-get($font-weight, nm);
       font-size: 0.7em;
       border-radius: 50%;
       background-color: $colour-primary;
@@ -351,7 +364,7 @@ form {
     background-color: $light;
     border-radius: $bd-radius;
     margin-bottom: 20px;
-    @include btn-shadow;
+    @include shadow;
     > img {
       object-fit: cover;
       width: 100%;
@@ -365,8 +378,8 @@ form {
       left: 240px;
       background-color: $colour-tertiary;
       color: darken($colour-tertiary, 40);
-      font-size: 0.8em;
-      font-weight: 700;
+      font-size: map-get($font-size, sm);
+      font-weight: map-get($font-weight, bd);
       border-radius: 2px;
       padding: 5px $padding-sm + 5;
     }
@@ -376,7 +389,7 @@ form {
     position: absolute;
     top: 195px;
     left: 285px;
-    font-size: 1.3em;
+    font-size: map-get($font-size, xl);
     > .far {
       position: absolute;
       color: darken($colour-fourth, 60);
@@ -390,7 +403,6 @@ form {
           $colour-primary
         );
         -webkit-background-clip: text;
-        background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: btn-like both 500ms cubic-bezier(0.9, 0.83, 0.83, 0.67);
       }
@@ -433,7 +445,7 @@ form {
   > i {
     flex: 1;
     text-align: right;
-    font-size: 1.3em;
+    font-size: map-get($font-size, xl);
     color: darken($colour-fourth, 60);
     padding-right: $padding-md + $padding-sm;
   }
@@ -464,10 +476,10 @@ form {
   overflow: hidden;
   width: 94%;
   background-color: $light;
-  border-radius: 15px;
+  border-radius: $bd-radius;
   padding: 0;
   margin-bottom: 15px;
-  @include btn-shadow;
+  @include shadow;
   animation: menu $animation-dur backwards ease-in-out;
   @for $i from 1 through 3 {
     &--#{$i} {
@@ -485,7 +497,7 @@ form {
     display: flex;
     &__text {
       width: 80%;
-      h3,
+      h5,
       p {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -494,10 +506,10 @@ form {
     }
     &__price {
       width: 20%;
-      font-weight: 700;
+      font-weight: map-get($font-weight, bd);
       text-align: center;
       > p {
-        padding-top: 19px;
+        padding-top: $padding-md - 1;
       }
     }
   }
@@ -514,8 +526,8 @@ form {
   transform-origin: right center;
   cursor: pointer;
   color: $light;
-  font-size: 1.3em;
-  border-radius: 0 15px 15px 0;
+  font-size: map-get($font-size, xl);
+  border-radius: 0 $bd-radius $bd-radius 0;
   background-color: $colour-tertiary;
   transition: width 500ms linear;
 }
@@ -525,7 +537,7 @@ form {
   padding: $padding-sm 0;
   margin: 20px 0 60px;
   span {
-    padding: 0 $padding-md * 1;
+    padding: 0 $padding-md;
   }
 }
 
@@ -549,9 +561,9 @@ footer {
   padding-left: $padding-md + 5;
   &__li {
     padding: $padding-sm - 5 0;
-    font-size: 0.9em;
+    font-size: map-get($font-size, md);
     > i {
-      font-size: 0.8em;
+      font-size: map-get($font-size, sm);
     }
   }
 }
