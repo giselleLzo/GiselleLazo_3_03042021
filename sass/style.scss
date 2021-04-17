@@ -186,25 +186,32 @@ a {
   height: 100%;
   z-index: 3;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: $light;
+  background-color: rgba(255, 255, 255, 0.9);
   animation: load-pg $animation-delay both 2150ms ease-in-out;
   &__load {
-    width: $size * 6;
+    width: $size * 5;
     height: $size * 5;
     display: flex;
     justify-content: space-evenly;
+    padding: 0;
     &__bar {
       height: 100%;
       width: $size;
       background-color: $colour-bars;
-      animation: bars $animation-dur both 3000ms
-        cubic-bezier(0.9, 0.83, 0.83, 0.67);
+      animation: bars $animation-dur both infinite
+        cubic-bezier(0.9, 0.83, 0.83, 0.67) alternate;
       @for $i from 1 through $number-bars {
         &--#{$i} {
           animation-delay: $animation-delay * $i;
+        }
+        &--#{$i}-inv {
+          animation-delay: $animation-delay * $i;
+          animation-direction: alternate-reverse;
+          background-color: $colour-secondary;
         }
       }
     }

@@ -123,32 +123,49 @@ a {
   height: 100%;
   z-index: 3;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   animation: load-pg 333.3333333333ms both 2150ms ease-in-out;
 }
 .loading__load {
-  width: 150px;
+  width: 125px;
   height: 125px;
   display: flex;
   justify-content: space-evenly;
+  padding: 0;
 }
 .loading__load__bar {
   height: 100%;
   width: 25px;
   background-color: #9356dc;
-  animation: bars 1000ms both 3000ms cubic-bezier(0.9, 0.83, 0.83, 0.67);
+  animation: bars 1000ms both infinite cubic-bezier(0.9, 0.83, 0.83, 0.67) alternate;
 }
 .loading__load__bar--1 {
   animation-delay: 333.3333333333ms;
 }
+.loading__load__bar--1-inv {
+  animation-delay: 333.3333333333ms;
+  animation-direction: alternate-reverse;
+  background-color: #ff79da;
+}
 .loading__load__bar--2 {
   animation-delay: 666.6666666667ms;
 }
+.loading__load__bar--2-inv {
+  animation-delay: 666.6666666667ms;
+  animation-direction: alternate-reverse;
+  background-color: #ff79da;
+}
 .loading__load__bar--3 {
   animation-delay: 1000ms;
+}
+.loading__load__bar--3-inv {
+  animation-delay: 1000ms;
+  animation-direction: alternate-reverse;
+  background-color: #ff79da;
 }
 
 /*Header*/
