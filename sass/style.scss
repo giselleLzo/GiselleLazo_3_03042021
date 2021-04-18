@@ -1,3 +1,43 @@
+/*Media Queries*/
+
+$breakpoints: (
+  smallDevices: 576px,
+  mediumDevices: 768px,
+  largeDevices: 992px,
+  x-largeDevices: 1200px,
+  xx-largeDevices: 1400,
+);
+
+@mixin smallDevices {
+  @media screen and (min-width: map-get($breakpoints, smallDevices)) {
+    @content;
+  }
+}
+
+@mixin mediumDevices {
+  @media screen and (min-width: map-get($breakpoints, mediumDevices)) {
+    @content;
+  }
+}
+
+@mixin largeDevices {
+  @media screen and (min-width: map-get($breakpoints, largeDevices)) {
+    @content;
+  }
+}
+
+@mixin x-largeDevices {
+  @media screen and (min-width: map-get($breakpoints, x-largeDevices)) {
+    @content;
+  }
+}
+
+@mixin xx-largeDevices {
+  @media screen and (min-width: map-get($breakpoints, xx-largeDevices)) {
+    @content;
+  }
+}
+
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
@@ -119,7 +159,7 @@ $menu-delay: $animation-dur / 3;
   }
 }
 
-/**** Mobile styles ****/
+/**** Mobile First - styles ****/
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -135,6 +175,9 @@ h1 {
 h2 {
   padding: $padding-md + $padding-sm 0 0 $padding-md + $padding-sm;
   margin-bottom: 0;
+  @include smallDevices {
+    padding-left: $padding-md * 3;
+  }
 }
 
 h3 {
@@ -298,6 +341,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: auto;
+
   &__menu {
     display: block;
     position: relative;
@@ -357,7 +401,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   margin: auto;
-  padding: $padding-md;
+  padding: $padding-md $padding-md $padding-md * 3;
 }
 
 .restaurants-card {
@@ -372,11 +416,18 @@ form {
     border-radius: $bd-radius;
     margin-bottom: 20px;
     @include shadow;
+    @include smallDevices {
+      width: 500px;
+      height: 320px;
+    }
     > img {
       object-fit: cover;
       width: 100%;
       height: 175px;
       border-radius: $bd-radius $bd-radius 0 0;
+      @include smallDevices {
+        height: 240px;
+      }
     }
     > .new {
       display: block;
@@ -389,6 +440,9 @@ form {
       font-weight: map-get($font-weight, bd);
       border-radius: 2px;
       padding: 5px $padding-sm + 5;
+      @include smallDevices {
+        left: 405px;
+      }
     }
   }
   &__like {
@@ -397,6 +451,10 @@ form {
     top: 195px;
     left: 285px;
     font-size: map-get($font-size, xl);
+    @include smallDevices {
+      left: 450px;
+      top: 260px;
+    }
     > .far {
       position: absolute;
       color: darken($colour-fourth, 60);
@@ -573,20 +631,4 @@ footer {
       font-size: map-get($font-size, sm);
     }
   }
-}
-
-/**** Small devices styles ****/
-@media all and (min-width: 576px) {
-}
-
-/**** Medium devices styles ****/
-@media all and (min-width: 768px) {
-}
-
-/**** Large devices styles ****/
-@media all and (min-width: 992px) {
-}
-
-/**** X-Large devices styles ****/
-@media all and (min-width: 1200px) {
 }
