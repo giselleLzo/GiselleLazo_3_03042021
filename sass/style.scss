@@ -197,8 +197,14 @@ h2 {
 h3 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.7em;
-  flex: 2;
   margin-bottom: 0;
+  margin-left: 20px;
+  @include mediumDevices {
+    margin-left: 15px;
+  }
+  @include largeDevices {
+    margin-left: 0;
+  }
 }
 
 h4 {
@@ -209,6 +215,9 @@ h4 {
   border-bottom: 3px solid $colour-tertiary;
   margin-left: 20px;
   width: 40px;
+  @include largeDevices {
+    margin-left: 10px;
+  }
 }
 
 h5 {
@@ -285,6 +294,7 @@ header {
   align-items: flex-start;
   @include xx-largeDevices {
     max-width: 1230px;
+    position: relative;
   }
   img {
     padding: $padding-md 0 $padding-sm + 5;
@@ -295,6 +305,9 @@ header {
     color: darken($colour-fourth, 70);
     padding-top: $padding-md + $padding-sm;
     left: 20px;
+    @include xx-largeDevices {
+      position: absolute;
+    }
   }
 }
 
@@ -582,7 +595,7 @@ form {
   }
 }
 
-/*Menu page*/
+/*Menu card page*/
 
 .menu {
   display: flex;
@@ -603,25 +616,48 @@ form {
   margin-top: -55px;
   background-color: lighten($colour-fourth, 5);
   border-radius: 35px 35px 0 0;
+  @include mediumDevices {
+    align-items: center;
+    padding-right: $padding-md;
+  }
+  @include largeDevices {
+    padding-right: 0;
+  }
 }
 
 .menu-heading {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: baseline;
-  padding-left: $padding-md;
   > i {
-    flex: 1;
-    text-align: right;
+    margin-right: 5%;
     font-size: map-get($font-size, xl);
     color: darken($colour-fourth, 60);
-    padding-right: $padding-md + $padding-sm;
+    @include mediumDevices {
+      margin-right: 0;
+    }
+  }
+  @include mediumDevices {
+    width: 690px;
+    margin-top: 20px;
+  }
+  @include largeDevices {
+    width: 90%;
   }
 }
 
 .menu-main {
   display: flex;
   flex-direction: column;
+  @include mediumDevices {
+    width: auto;
+  }
+  @include largeDevices {
+    width: 96%;
+  }
+  @include x-largeDevices {
+    width: 92%;
+  }
 }
 
 .menu-card {
@@ -633,6 +669,10 @@ form {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  @include largeDevices {
+    flex-direction: row;
+    margin-left: 0;
+  }
 }
 
 .menu-descrip {
@@ -647,6 +687,17 @@ form {
   border-radius: $bd-radius;
   padding: 0;
   margin-bottom: 15px;
+  @include mediumDevices {
+    width: 690px;
+  }
+  @include largeDevices {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  @include x-largeDevices {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   @include shadow;
   animation: menu $animation-dur backwards ease-in-out;
   @for $i from 1 through 3 {
