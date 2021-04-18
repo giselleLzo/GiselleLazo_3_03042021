@@ -184,6 +184,9 @@ h2 {
   @include largeDevices {
     padding-left: $padding-md * 3;
   }
+  @include x-largeDevices {
+    padding-left: $padding-md * 4;
+  }
 }
 
 h3 {
@@ -448,6 +451,9 @@ form {
     flex-wrap: wrap;
     justify-content: center;
   }
+  @include x-largeDevices {
+    justify-content: flex-start;
+  }
 }
 
 .restaurants-card {
@@ -475,6 +481,9 @@ form {
     @include largeDevices {
       width: 205px;
       margin-right: 10px;
+    }
+    @include x-largeDevices {
+      width: 250px;
     }
     > img {
       object-fit: cover;
@@ -508,6 +517,9 @@ form {
       @include largeDevices {
         left: 115px;
       }
+      @include x-largeDevices {
+        left: 157px;
+      }
     }
   }
   &__like {
@@ -527,6 +539,9 @@ form {
     @include largeDevices {
       left: 190px;
       font-size: map-get($font-size, lg);
+    }
+    @include x-largeDevices {
+      left: 230px;
     }
     > .far {
       position: absolute;
