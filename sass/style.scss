@@ -687,6 +687,13 @@ form {
   border-radius: $bd-radius;
   padding: 0;
   margin-bottom: 15px;
+  @include shadow;
+  animation: menu $animation-dur backwards ease-in-out;
+  @for $i from 1 through 3 {
+    &--#{$i} {
+      animation-delay: $menu-delay * $i;
+    }
+  }
   @include mediumDevices {
     width: 690px;
   }
@@ -697,13 +704,6 @@ form {
   @include x-largeDevices {
     margin-left: 10px;
     margin-right: 10px;
-  }
-  @include shadow;
-  animation: menu $animation-dur backwards ease-in-out;
-  @for $i from 1 through 3 {
-    &--#{$i} {
-      animation-delay: $menu-delay * $i;
-    }
   }
   &:hover .check-box {
     width: 20%;

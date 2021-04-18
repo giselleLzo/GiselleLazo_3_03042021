@@ -683,6 +683,15 @@ form input {
   box-shadow: 3px 5px 6px #d1d1d1;
   animation: menu 1000ms backwards ease-in-out;
 }
+.menu-descrip--1 {
+  animation-delay: 333.3333333333ms;
+}
+.menu-descrip--2 {
+  animation-delay: 666.6666666667ms;
+}
+.menu-descrip--3 {
+  animation-delay: 1000ms;
+}
 @media screen and (min-width: 768px) {
   .menu-descrip {
     width: 690px;
@@ -699,15 +708,6 @@ form input {
     margin-left: 10px;
     margin-right: 10px;
   }
-}
-.menu-descrip--1 {
-  animation-delay: 333.3333333333ms;
-}
-.menu-descrip--2 {
-  animation-delay: 666.6666666667ms;
-}
-.menu-descrip--3 {
-  animation-delay: 1000ms;
 }
 .menu-descrip:hover .check-box {
   width: 20%;
