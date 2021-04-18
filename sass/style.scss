@@ -178,6 +178,9 @@ h2 {
   @include smallDevices {
     padding-left: $padding-md * 3;
   }
+  @include mediumDevices {
+    padding-left: $padding-md * 2;
+  }
 }
 
 h3 {
@@ -341,7 +344,11 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: auto;
-
+  > ul {
+    @include mediumDevices {
+      display: flex;
+    }
+  }
   &__menu {
     display: block;
     position: relative;
@@ -352,12 +359,27 @@ form {
     @include shadow;
     padding: $padding-sm $padding-md * 2;
     margin-bottom: 20px;
+    @include mediumDevices {
+      width: 190px;
+      margin-right: 10px;
+      margin-left: 15px;
+      padding-left: $padding-md + 5;
+      padding-right: 0;
+    }
     > p {
       display: flex;
+      @include mediumDevices {
+        font-size: map-get($font-size, md);
+      }
       > .fas {
         font-size: map-get($font-size, lg);
         color: darken($colour-fourth, 50);
         padding-right: $padding-sm + 5;
+        @include mediumDevices {
+          padding-right: 5px;
+          padding-top: 2px;
+          font-size: map-get($font-size, md);
+        }
       }
     }
     &:hover {
@@ -402,6 +424,11 @@ form {
   align-items: flex-start;
   margin: auto;
   padding: $padding-md $padding-md $padding-md * 3;
+  @include mediumDevices {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .restaurants-card {
@@ -420,6 +447,12 @@ form {
       width: 500px;
       height: 320px;
     }
+    @include mediumDevices {
+      width: 330px;
+      height: 250px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
     > img {
       object-fit: cover;
       width: 100%;
@@ -427,6 +460,9 @@ form {
       border-radius: $bd-radius $bd-radius 0 0;
       @include smallDevices {
         height: 240px;
+      }
+      @include mediumDevices {
+        height: 175px;
       }
     }
     > .new {
@@ -443,6 +479,9 @@ form {
       @include smallDevices {
         left: 405px;
       }
+      @include mediumDevices {
+        left: 240px;
+      }
     }
   }
   &__like {
@@ -454,6 +493,10 @@ form {
     @include smallDevices {
       left: 450px;
       top: 260px;
+    }
+    @include mediumDevices {
+      left: 290px;
+      top: 195px;
     }
     > .far {
       position: absolute;
@@ -615,10 +658,17 @@ footer {
   flex-direction: column;
   background-color: darken($colour-fourth, 75);
   color: $light;
+  @include mediumDevices {
+    align-items: center;
+  }
   img {
     width: 30%;
     padding: $padding-md + 5 0 0 $padding-md + 5;
     filter: invert(100%);
+    @include mediumDevices {
+      padding-left: 0;
+      width: 25%;
+    }
   }
 }
 
@@ -630,5 +680,9 @@ footer {
     > i {
       font-size: map-get($font-size, sm);
     }
+  }
+  @include mediumDevices {
+    text-align: center;
+    padding-left: 0;
   }
 }
