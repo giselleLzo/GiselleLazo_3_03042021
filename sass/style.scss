@@ -181,6 +181,9 @@ h2 {
   @include mediumDevices {
     padding-left: $padding-md * 2;
   }
+  @include largeDevices {
+    padding-left: $padding-md * 3;
+  }
 }
 
 h3 {
@@ -348,6 +351,10 @@ form {
     @include mediumDevices {
       display: flex;
     }
+    @include largeDevices {
+      justify-content: space-around;
+      margin: auto;
+    }
   }
   &__menu {
     display: block;
@@ -366,10 +373,17 @@ form {
       padding-left: $padding-md + 5;
       padding-right: 0;
     }
+    @include largeDevices {
+      width: auto;
+      padding: $padding-sm $padding-md * 2;
+    }
     > p {
       display: flex;
       @include mediumDevices {
         font-size: map-get($font-size, md);
+      }
+      @include largeDevices {
+        font-size: 1em;
       }
       > .fas {
         font-size: map-get($font-size, lg);
@@ -379,6 +393,11 @@ form {
           padding-right: 5px;
           padding-top: 2px;
           font-size: map-get($font-size, md);
+        }
+        @include largeDevices {
+          padding-right: $padding-sm + 5;
+          font-size: map-get($font-size, lg);
+          padding-top: 0;
         }
       }
     }
@@ -453,6 +472,10 @@ form {
       margin-right: 15px;
       margin-left: 15px;
     }
+    @include largeDevices {
+      width: 205px;
+      margin-right: 10px;
+    }
     > img {
       object-fit: cover;
       width: 100%;
@@ -482,6 +505,9 @@ form {
       @include mediumDevices {
         left: 240px;
       }
+      @include largeDevices {
+        left: 115px;
+      }
     }
   }
   &__like {
@@ -497,6 +523,10 @@ form {
     @include mediumDevices {
       left: 290px;
       top: 195px;
+    }
+    @include largeDevices {
+      left: 190px;
+      font-size: map-get($font-size, lg);
     }
     > .far {
       position: absolute;
@@ -668,6 +698,9 @@ footer {
     @include mediumDevices {
       padding-left: 0;
       width: 25%;
+    }
+    @include largeDevices {
+      width: 20%;
     }
   }
 }
