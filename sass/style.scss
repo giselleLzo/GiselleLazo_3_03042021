@@ -3,7 +3,7 @@
 $breakpoints: (
   smallDevices: 576px,
   mediumDevices: 768px,
-  largeDevices: 992px,
+  largeDevices: 1112px,
   x-largeDevices: 1200px,
   xx-largeDevices: 1400px,
 );
@@ -135,7 +135,7 @@ $animation-delay: $animation-dur / $number-bars;
   }
 }
 
-$menu-delay: $animation-dur / 3;
+$menu-delay: $animation-dur / 4;
 
 @keyframes menu {
   from {
@@ -675,6 +675,12 @@ form {
   }
 }
 
+.wrap {
+  @include largeDevices {
+    flex-wrap: wrap;
+  }
+}
+
 .menu-descrip {
   cursor: pointer;
   display: flex;
@@ -689,7 +695,7 @@ form {
   margin-bottom: 15px;
   @include shadow;
   animation: menu $animation-dur backwards ease-in-out;
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
     &--#{$i} {
       animation-delay: $menu-delay * $i;
     }
@@ -706,7 +712,7 @@ form {
     margin-right: 10px;
   }
   &:hover .check-box {
-    width: 20%;
+    width: 60px;
     > .fa-check-circle {
       animation: c-box 500ms linear;
     }
@@ -731,6 +737,30 @@ form {
         padding-top: $padding-md - 1;
       }
     }
+  }
+}
+
+.size {
+  @include largeDevices {
+    width: 49%;
+    margin-right: 5px;
+  }
+  @include x-largeDevices {
+    width: 48%;
+    margin-right: 10px;
+  }
+}
+
+.top {
+  margin-top: -280px;
+  @include smallDevices {
+    margin-top: -400px;
+  }
+  @include mediumDevices {
+    margin-top: -600px;
+  }
+  @include largeDevices {
+    margin-top: -800px;
   }
 }
 

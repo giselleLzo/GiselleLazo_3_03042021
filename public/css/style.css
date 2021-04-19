@@ -88,7 +88,7 @@ h2 {
     padding-left: 40px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   h2 {
     padding-left: 60px;
   }
@@ -110,7 +110,7 @@ h3 {
     margin-left: 15px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   h3 {
     margin-left: 0;
   }
@@ -125,7 +125,7 @@ h4 {
   margin-left: 20px;
   width: 40px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   h4 {
     margin-left: 10px;
   }
@@ -313,7 +313,7 @@ form input {
     display: flex;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .working > ul {
     justify-content: space-around;
     margin: auto;
@@ -339,7 +339,7 @@ form input {
     padding-right: 0;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .working__menu {
     width: auto;
     padding: 10px 40px;
@@ -359,7 +359,7 @@ form input {
     font-size: 0.9em;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .working__menu > p {
     font-size: 1em;
   }
@@ -376,7 +376,7 @@ form input {
     font-size: 0.9em;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .working__menu > p > .fas {
     padding-right: 15px;
     font-size: 1.1em;
@@ -464,7 +464,7 @@ form input {
     margin-left: 15px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .restaurants-card__preview {
     width: 205px;
     margin-right: 10px;
@@ -513,7 +513,7 @@ form input {
     left: 240px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .restaurants-card__preview > .new {
     left: 115px;
   }
@@ -542,7 +542,7 @@ form input {
     top: 195px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .restaurants-card__like {
     left: 190px;
     font-size: 1.1em;
@@ -598,7 +598,7 @@ form input {
     padding-right: 20px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .menu-restaurant {
     padding-right: 0;
   }
@@ -625,7 +625,7 @@ form input {
     margin-top: 20px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .menu-heading {
     width: 90%;
   }
@@ -640,7 +640,7 @@ form input {
     width: auto;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .menu-main {
     width: 96%;
   }
@@ -661,10 +661,16 @@ form input {
   flex-direction: column;
   margin-left: 20px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .menu-prev {
     flex-direction: row;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1112px) {
+  .wrap {
+    flex-wrap: wrap;
   }
 }
 
@@ -684,12 +690,15 @@ form input {
   animation: menu 1000ms backwards ease-in-out;
 }
 .menu-descrip--1 {
-  animation-delay: 333.3333333333ms;
+  animation-delay: 250ms;
 }
 .menu-descrip--2 {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 500ms;
 }
 .menu-descrip--3 {
+  animation-delay: 750ms;
+}
+.menu-descrip--4 {
   animation-delay: 1000ms;
 }
 @media screen and (min-width: 768px) {
@@ -697,7 +706,7 @@ form input {
     width: 690px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1112px) {
   .menu-descrip {
     margin-left: 4px;
     margin-right: 4px;
@@ -710,7 +719,7 @@ form input {
   }
 }
 .menu-descrip:hover .check-box {
-  width: 20%;
+  width: 60px;
 }
 .menu-descrip:hover .check-box > .fa-check-circle {
   animation: c-box 500ms linear;
@@ -735,6 +744,38 @@ form input {
 }
 .menu-descrip__content__price > p {
   padding-top: 19px;
+}
+
+@media screen and (min-width: 1112px) {
+  .size {
+    width: 49%;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .size {
+    width: 48%;
+    margin-right: 10px;
+  }
+}
+
+.top {
+  margin-top: -280px;
+}
+@media screen and (min-width: 576px) {
+  .top {
+    margin-top: -400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .top {
+    margin-top: -600px;
+  }
+}
+@media screen and (min-width: 1112px) {
+  .top {
+    margin-top: -800px;
+  }
 }
 
 .check-box {
