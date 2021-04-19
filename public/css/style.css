@@ -90,7 +90,7 @@ h2 {
 }
 @media screen and (min-width: 1112px) {
   h2 {
-    padding-left: 60px;
+    padding-left: 100px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -627,7 +627,7 @@ form input {
 }
 @media screen and (min-width: 1112px) {
   .menu-heading {
-    width: 90%;
+    width: 95%;
   }
 }
 
