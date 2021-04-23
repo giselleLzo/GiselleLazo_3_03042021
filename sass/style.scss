@@ -3,7 +3,7 @@
 $breakpoints: (
   smallDevices: 576px,
   mediumDevices: 768px,
-  largeDevices: 1112px,
+  largeDevices: 992px,
   x-largeDevices: 1200px,
   xx-largeDevices: 1400px,
 );
@@ -187,7 +187,7 @@ h2 {
     padding-left: $padding-md * 2;
   }
   @include largeDevices {
-    padding-left: $padding-md * 5;
+    padding-left: $padding-md * 3;
   }
   @include x-largeDevices {
     padding-left: $padding-md * 4;
@@ -644,6 +644,9 @@ form {
   @include largeDevices {
     width: 95%;
   }
+  @include x-largeDevices {
+    width: 90%;
+  }
 }
 
 .menu-main {
@@ -729,6 +732,7 @@ form {
         white-space: nowrap;
       }
     }
+
     &__price {
       width: 20%;
       font-weight: map-get($font-weight, bd);
@@ -737,6 +741,10 @@ form {
         padding-top: $padding-md - 1;
       }
     }
+  }
+  &:hover .menu-descrip__content {
+    width: 80%;
+    transition: width 500ms linear;
   }
 }
 
